@@ -16,7 +16,10 @@ massive(CONNECTION_STRING)
 
 })
 
-app.get('/api/inventory', Ctrl.readInventory)
+app.get('/api/inventory', Ctrl.read)
+app.post('api/inventory', ctrl.create)
+app.put('api/inventory', ctrl.update)
+app.delete('api/inventory', ctrl.delete)
 
 
 app.listen(SERVER_PORT, console.log( `Server listening on PORT: ${SERVER_PORT}`))

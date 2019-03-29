@@ -8,7 +8,7 @@ export default function name({img, name, price, id}) {
     const [input, setInput] = useState('')
 
     function submit() {
-		axios.put(`/api/inventory?id=${id}`, { desc: input })
+		axios.put(`/api/inventory?id=${id}`, { price: input})
 			.then(() => { });
 	};
 
