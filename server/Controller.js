@@ -22,7 +22,7 @@ module.exports = {
     update: async (req, res) => {
         const db = req.app.get('db')
         const { id } = req.query
-        const { price, img }
+        const { price, img } = req.body
 
         await db.product.save({ product_id: id,  price: price, img: img})
         .catch(err => res.sendStatus(501))

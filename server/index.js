@@ -13,13 +13,12 @@ app.use(express.json())
 massive(CONNECTION_STRING)
 .then(db => {
     app.set('db', db)
-
 })
 
 app.get('/api/inventory', Ctrl.read)
-app.post('api/inventory', ctrl.create)
-app.put('api/inventory', ctrl.update)
-app.delete('api/inventory', ctrl.delete)
+app.post('api/inventory', Ctrl.create)
+app.put('api/inventory', Ctrl.update)
+app.delete('api/inventory', Ctrl.delete)
 
 
 app.listen(SERVER_PORT, console.log( `Server listening on PORT: ${SERVER_PORT}`))

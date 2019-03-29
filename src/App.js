@@ -22,7 +22,8 @@ class App extends Component {
       </nav>
       <Switch>
         <Route path='/' exact component={Dashboard} />
-        <Route path='/admin' component={Form} />
+        <Route path='/add' component={Form} />
+        <Route path='/edit/:id' component={Form} />
       </Switch>
 
       </Route>
