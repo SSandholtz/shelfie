@@ -1,0 +1,7 @@
+.mainBox {
+    height: 80vh;
+    width: 55%;
+    overflow: scroll;
+}
+
+.mainBox::-webkit-scrollbar { width: 0 !important }
